@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "FillMate AI",
+  "version": "1.0",
+  "description": "AI-powered form filling assistant",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
