@@ -1,0 +1,689 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    background: transparent;
+}
+
+
+body {
+
+    width: 330px;
+    height: 400px;
+
+    padding: 5px;
+
+    background: transparent;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #1d211f;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================
+   MAIN PANEL
+========================================= */
+
+.app {
+
+    position: relative;
+
+    width: 100%;
+    height: 390px;
+
+    padding: 14px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(211, 223, 217, 0.45),
+            transparent 38%
+        ),
+
+        #f7f6f2;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+
+        0 4px 18px
+        rgba(25, 30, 28, 0.10);
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.topbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+
+/* =========================================
+   ACTUAL FILLMATE LOGO
+========================================= */
+
+.brand-logo {
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    box-shadow:
+
+        0 3px 8px
+        rgba(25, 30, 28, 0.12);
+
+}
+
+
+.brand-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+
+/* =========================================
+   BRAND NAME
+========================================= */
+
+.brand-name {
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    letter-spacing: -0.2px;
+
+    color: #202522;
+
+}
+
+
+
+/* =========================================
+   READY STATUS
+========================================= */
+
+.ready {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #7d8581;
+
+    font-size: 8px;
+
+}
+
+
+.ready-dot {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #7ba092;
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    margin-bottom: 17px;
+
+}
+
+
+.small-label {
+
+    margin-bottom: 5px;
+
+    color: #9a9f9c;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+}
+
+
+.intro h1 {
+
+    color: #161a18;
+
+    font-size: 22px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.8px;
+
+    font-weight: 650;
+
+}
+
+
+
+/* =========================================
+   ACTION CARDS
+========================================= */
+
+.actions {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 7px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.action-card {
+
+    position: relative;
+
+    height: 78px;
+
+    padding: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    border: 1px solid
+        rgba(30, 35, 33, 0.06);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.6);
+
+    color: #303633;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.action-card:hover {
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        0 7px 18px
+        rgba(40, 45, 42, 0.06);
+
+}
+
+
+.action-card.active {
+
+    background: #222825;
+
+    color: white;
+
+    border-color: #222825;
+
+    box-shadow:
+
+        0 7px 18px
+        rgba(30, 36, 33, 0.13);
+
+}
+
+
+
+/* =========================================
+   ACTION ICON
+========================================= */
+
+.action-icon {
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #ecece7;
+
+    color: #5e6863;
+
+}
+
+
+.action-card.active
+.action-icon {
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+}
+
+
+.action-icon svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+
+/* =========================================
+   ACTION TEXT
+========================================= */
+
+.action-text strong {
+
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 650;
+
+}
+
+
+.action-text span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 7px;
+
+    color: #969d99;
+
+}
+
+
+.action-card.active
+.action-text span {
+
+    color: #aeb6b1;
+
+}
+
+
+
+/* =========================================
+   ACTION ARROW
+========================================= */
+
+.action-arrow {
+
+    position: absolute;
+
+    right: 9px;
+    top: 8px;
+
+    font-size: 11px;
+
+    color: #a0a6a3;
+
+}
+
+
+.action-card.active
+.action-arrow {
+
+    color: #d4d9d6;
+
+}
+
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+
+    position: relative;
+
+    height: 73px;
+
+    padding: 10px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.92);
+
+    box-shadow:
+
+        0 5px 15px
+        rgba(40, 45, 42, 0.05);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+
+    width: calc(100% - 30px);
+
+    height: 48px;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: #303532;
+
+}
+
+
+textarea::placeholder {
+
+    color: #a6aaa8;
+
+}
+
+
+
+/* =========================================
+   MICROPHONE
+========================================= */
+
+.mic-button {
+
+    position: absolute;
+
+    right: 8px;
+    bottom: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #eeefeb;
+
+    color: #68716d;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.mic-button:hover {
+
+    transform: scale(1.06);
+
+    background: #e4e8e4;
+
+}
+
+
+.mic-button.listening {
+
+    background: #dce8e2;
+
+    color: #44685b;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(123, 160, 146, 0.12);
+
+}
+
+
+.mic-button svg {
+
+    width: 12px;
+    height: 12px;
+
+}
+
+
+
+/* =========================================
+   MAIN BUTTON
+========================================= */
+
+.primary-button {
+
+    width: 100%;
+
+    height: 36px;
+
+    margin-top: 8px;
+
+    padding: 0 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #222825;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 6px 15px
+        rgba(30, 36, 33, 0.12);
+
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.primary-button:hover {
+
+    background: #171c19;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        0 8px 18px
+        rgba(30, 36, 33, 0.17);
+
+}
+
+
+.primary-button:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.primary-button:disabled {
+
+    opacity: 0.7;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+
+.primary-button svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 12px;
+
+    color: #a4a9a6;
+
+    font-size: 7px;
+
+}
+
+
+.footer-dot {
+
+    color: #c4c7c5;
+
+}
